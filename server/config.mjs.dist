@@ -1,0 +1,11 @@
+const db = {
+  DB_NAME: 'database',
+  DB_USERNAME: 'user',
+  DB_PASSWORD: 'password',
+  DB_HOST: null,
+  DB_PORT: null,
+};
+
+const logLevel = 'debug';
+
+export { db, logLevel };

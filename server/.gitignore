@@ -1,0 +1,6 @@
+# Project specific
+config.mjs
+log.log
+logs/
+# nodejs
+node_modules/
