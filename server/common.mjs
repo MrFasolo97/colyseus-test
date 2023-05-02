@@ -1,5 +1,5 @@
 import log4js from 'log4js';
-import * as mysql from 'mysql';
+import mysql from 'mysql';
 import { logLevel, db as configDB } from './config.mjs';
 
 log4js.configure({
@@ -9,6 +9,14 @@ log4js.configure({
 
 const logger = log4js.getLogger();
 logger.level = logLevel || 'info';
+
+const db = {
+  DB_NAME: 'database',
+  DB_USERNAME: 'user',
+  DB_PASSWORD: 'password',
+  DB_HOST: null,
+  DB_PORT: null,
+};
 
 function initDB() {
   const dbconfig = {
@@ -26,4 +34,5 @@ function initDB() {
   return dbcon;
 }
 
-export { logger, initDB };
+
+export { db, logLevel, initDB, logger };
