@@ -10,14 +10,6 @@ log4js.configure({
 const logger = log4js.getLogger();
 logger.level = logLevel || 'info';
 
-const db = {
-  DB_NAME: 'database',
-  DB_USERNAME: 'user',
-  DB_PASSWORD: 'password',
-  DB_HOST: null,
-  DB_PORT: null,
-};
-
 function initDB() {
   const dbconfig = {
     host: configDB.DB_HOST || 'localhost',
@@ -34,5 +26,4 @@ function initDB() {
   return dbcon;
 }
 
-
-export { db, logLevel, initDB, logger };
+export { logLevel, initDB, logger };
